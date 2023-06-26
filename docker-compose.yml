@@ -16,5 +16,7 @@ services:
     container_name: grafana
     restart: always
     network_mode: host
+    depends_on:
+      - prometheus
     volumes:
       - '$HOME/grafana/config/grafana.ini:/etc/grafana/grafana.yml'
